@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 木星先生的博客</title>
+  <title>微机原理第二章-微处理器与总线 | 木星先生的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="时间管理，读书笔记，语言学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木星先生的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="一、8086&#x2F;8088的内部结构        执行部件EU：指令的译码、执行和数据运算总线接口部件BIU（bus interface unit）：管理CPU与系统总线接口、负责CPU对存储器和外设进行访问  二、寄存器组（8个通用寄存器、四个段寄存器、一个标志寄存器、一个指令指针    寄存器）        1）八个通用16位寄存器                数据寄存器：AX、BX、CX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微机原理第二章-微处理器与总线">
+<meta property="og:url" content="http://yoursite.com/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/index.html">
 <meta property="og:site_name" content="木星先生的博客">
-<meta property="og:description" content="时间管理，读书笔记，语言学习">
+<meta property="og:description" content="一、8086&#x2F;8088的内部结构        执行部件EU：指令的译码、执行和数据运算总线接口部件BIU（bus interface unit）：管理CPU与系统总线接口、负责CPU对存储器和外设进行访问  二、寄存器组（8个通用寄存器、四个段寄存器、一个标志寄存器、一个指令指针    寄存器）        1）八个通用16位寄存器                数据寄存器：AX、BX、CX">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-02T13:18:18.318Z">
+<meta property="article:modified_time" content="2020-03-02T13:18:02.434Z">
 <meta property="article:author" content="木星先生">
 <meta property="article:tag" content="人的一生便是成长的过程">
 <meta name="twitter:card" content="summary">
@@ -147,76 +149,188 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-微机原理第二章-微处理器与总线" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      微机原理第二章-微处理器与总线
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/" class="archive-article-date">
+
+        
+        <a href="/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/" class="archive-article-date">
   	<time datetime="2020-03-02T13:18:18.318Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/">微机原理第二章-微处理器与总线</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>一、8086/8088的内部结构<br>        执行部件EU：指令的译码、执行和数据运算<br>总线接口部件BIU（bus interface unit）：管理CPU与系统总线接口、负责CPU对存储器和外设进行访问</p>
+<hr>
+<p>二、寄存器组（8个通用寄存器、四个段寄存器、一个标志寄存器、一个指令指针    寄存器）<br>        1）八个通用16位寄存器<br>                数据寄存器：AX、BX、CX、DX<br>                AX：累加器（accumulator）-用于算术、逻辑运算以及同外设传送数据<br>                BX：基址寄存器（base address register）-存放存储器地址<br>                CX：计数器（counter）-循环及窜操作指令中隐含的计数器<br>                DX：数据寄存器（data register）-存放双字长数据的高位、外设端口地址<br>                SI：源地址寄存器（source index）- 存储器变址寻址时提供地址<br>                DI：目的地址寄存器（destination index）-存储器变址寻址时提供地址<br>                SP：堆栈指针寄存器（stack pointer）-堆栈栈顶地址（偏移地址）<br>                BP：基址指针寄存器（base pointer）-堆栈段中的基地址<br>注：堆栈按照先进后出的原则，相信语言学习者都能了解，这里不过多赘述<br>                IP：指令指针寄存器（instruction pointer）-指示主存储器指令的位置、随指令执行，IP自动修改指示下一条指令所在存储器位置<br>                PSW：程序状态字寄存器（flags）-状态标志：</p>
+<hr>
+<p>CF：进位标志（carry flag）最高位有进位或借位置1<br>ZF：零标志（zero flag）结果为零置1<br>SF：符号标志（sign flag）最高位（符号位）为1时置1<br>PF：奇偶标志（parity flag）运算结果中最低字节（低八位）中1的个数，个数为偶数时置1<br>OF：溢出标志（overflow flag）运算结果有溢出置1<br>AF：辅助进位标志位（auxiliary parity flag）D3位有进位/借位置1</p>
+<hr>
+<p>控制标志：（控制处理器执行命令的方式）<br>DF：方向标志（direction flag）置1自动减少、置0自动增加<br>IF：终端允许（interrupt-enable flag）置1允许中段//中段的概念不赘述<br>TF：陷阱标志（trap flag）置一处理器单步操作 //这里在调试中很有用（Debug模式）</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你给我买糖<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/source/img/duomianti.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/03/01/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%BF%B0/" class="archive-article-date">
-  	<time datetime="2020-03-01T09:17:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-01</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/01/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微机原理第一章-微型计算机概述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/03/01/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%B8%80%E7%AB%A0-%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A6%82%E8%BF%B0/">微机原理第一章-微型计算机概述</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="微机原理第二章-微处理器与总线" data-title="微机原理第二章-微处理器与总线" data-url="http://yoursite.com/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -239,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
