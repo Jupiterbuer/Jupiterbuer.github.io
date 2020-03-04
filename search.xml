@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>微机原理第二章-微处理器与总线</title>
-    <url>/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/</url>
+    <title>微机原理第二章：微处理器与总线（一、微处理器结构）</title>
+    <url>/2020/03/04/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF%EF%BC%88%E4%B8%80%E3%80%81%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E7%BB%93%E6%9E%84%EF%BC%89/</url>
     <content><![CDATA[<hr>
 <p>一、8086/8088的内部结构<br>        执行部件EU：指令的译码、执行和数据运算<br>总线接口部件BIU（bus interface unit）：管理CPU与系统总线接口、负责CPU对存储器和外设进行访问</p>
 <hr>
@@ -10,7 +10,9 @@
 <hr>
 <p>CF：进位标志（carry flag）最高位有进位或借位置1<br>ZF：零标志（zero flag）结果为零置1<br>SF：符号标志（sign flag）最高位（符号位）为1时置1<br>PF：奇偶标志（parity flag）运算结果中最低字节（低八位）中1的个数，个数为偶数时置1<br>OF：溢出标志（overflow flag）运算结果有溢出置1<br>AF：辅助进位标志位（auxiliary parity flag）D3位有进位/借位置1</p>
 <hr>
-<p>控制标志：（控制处理器执行命令的方式）<br>DF：方向标志（direction flag）置1自动减少、置0自动增加<br>IF：终端允许（interrupt-enable flag）置1允许中段//中段的概念不赘述<br>TF：陷阱标志（trap flag）置一处理器单步操作 //这里在调试中很有用（Debug模式）</p>
+<p>控制标志：（控制处理器执行命令的方式）<br>DF：方向标志（direction flag）置1自动减少、置0自动增加<br>IF：终端允许（interrupt-enable flag）置1允许中段//中段的概念不赘述<br>TF：陷阱标志（trap flag）置一处理器单步操作 //这里在调试中很有用（Debug模式）<br>段寄存器：<br>CS （code segment）代码段寄存器-指明当前代码段起始地址<br>DS（data segment）数据段寄存器-指明当前数据段起始地址<br>ES（exit segment）附加段寄存器-指明当前附加段起始地址<br>SS（stack segment）堆栈段寄存器-指明当前堆栈段起始地址    </p>
+<hr>
+<p>物理地址：1MB储存区域的某一单元的实际地址<br>逻辑地址：由段基地址和偏移地址组成<br>段基地址：逻辑段在主存储器中的起始地址<br>偏移地址：某段内指定存储单元到段基地址的距离<br>物理地址PA=段基地址*16+偏移地址</p>
 ]]></content>
   </entry>
   <entry>

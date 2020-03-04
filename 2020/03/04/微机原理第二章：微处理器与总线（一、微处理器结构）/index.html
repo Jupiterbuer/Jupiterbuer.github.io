@@ -81,13 +81,13 @@
 
 <meta name="description" content="一、8086&#x2F;8088的内部结构        执行部件EU：指令的译码、执行和数据运算总线接口部件BIU（bus interface unit）：管理CPU与系统总线接口、负责CPU对存储器和外设进行访问  二、寄存器组（8个通用寄存器、四个段寄存器、一个标志寄存器、一个指令指针    寄存器）        1）八个通用16位寄存器                数据寄存器：AX、BX、CX">
 <meta property="og:type" content="article">
-<meta property="og:title" content="微机原理第二章-微处理器与总线">
-<meta property="og:url" content="http://yoursite.com/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/index.html">
+<meta property="og:title" content="微机原理第二章：微处理器与总线（一、微处理器结构）">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF%EF%BC%88%E4%B8%80%E3%80%81%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E7%BB%93%E6%9E%84%EF%BC%89/index.html">
 <meta property="og:site_name" content="木星先生的博客">
 <meta property="og:description" content="一、8086&#x2F;8088的内部结构        执行部件EU：指令的译码、执行和数据运算总线接口部件BIU（bus interface unit）：管理CPU与系统总线接口、负责CPU对存储器和外设进行访问  二、寄存器组（8个通用寄存器、四个段寄存器、一个标志寄存器、一个指令指针    寄存器）        1）八个通用16位寄存器                数据寄存器：AX、BX、CX">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-02T13:18:18.318Z">
-<meta property="article:modified_time" content="2020-03-02T13:18:02.434Z">
+<meta property="article:published_time" content="2020-03-04T13:18:16.120Z">
+<meta property="article:modified_time" content="2020-03-04T13:17:54.766Z">
 <meta property="article:author" content="木星先生">
 <meta property="article:tag" content="人的一生便是成长的过程">
 <meta name="twitter:card" content="summary">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/03/02/微机原理第二章-微处理器与总线/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/04/微机原理第二章：微处理器与总线（一、微处理器结构）/"/>
 
 
 
 
 
-  <title>微机原理第二章-微处理器与总线 | 木星先生的博客</title>
+  <title>微机原理第二章：微处理器与总线（一、微处理器结构） | 木星先生的博客</title>
   
 
 
@@ -224,7 +224,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/02/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/04/%E5%BE%AE%E6%9C%BA%E5%8E%9F%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BC%9A%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E4%B8%8E%E6%80%BB%E7%BA%BF%EF%BC%88%E4%B8%80%E3%80%81%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E7%BB%93%E6%9E%84%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="木星先生">
@@ -241,7 +241,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">微机原理第二章-微处理器与总线</h1>
+          <h1 class="post-title" itemprop="name headline">微机原理第二章：微处理器与总线（一、微处理器结构）</h1>
         
 
         <div class="post-meta">
@@ -253,8 +253,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-02T21:18:18+08:00">
-                2020-03-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-04T21:18:16+08:00">
+                2020-03-04
               </time>
             
 
@@ -285,7 +285,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  558
+                  730
                 </span>
               
 
@@ -329,7 +329,9 @@
 <hr>
 <p>CF：进位标志（carry flag）最高位有进位或借位置1<br>ZF：零标志（zero flag）结果为零置1<br>SF：符号标志（sign flag）最高位（符号位）为1时置1<br>PF：奇偶标志（parity flag）运算结果中最低字节（低八位）中1的个数，个数为偶数时置1<br>OF：溢出标志（overflow flag）运算结果有溢出置1<br>AF：辅助进位标志位（auxiliary parity flag）D3位有进位/借位置1</p>
 <hr>
-<p>控制标志：（控制处理器执行命令的方式）<br>DF：方向标志（direction flag）置1自动减少、置0自动增加<br>IF：终端允许（interrupt-enable flag）置1允许中段//中段的概念不赘述<br>TF：陷阱标志（trap flag）置一处理器单步操作 //这里在调试中很有用（Debug模式）</p>
+<p>控制标志：（控制处理器执行命令的方式）<br>DF：方向标志（direction flag）置1自动减少、置0自动增加<br>IF：终端允许（interrupt-enable flag）置1允许中段//中段的概念不赘述<br>TF：陷阱标志（trap flag）置一处理器单步操作 //这里在调试中很有用（Debug模式）<br>段寄存器：<br>CS （code segment）代码段寄存器-指明当前代码段起始地址<br>DS（data segment）数据段寄存器-指明当前数据段起始地址<br>ES（exit segment）附加段寄存器-指明当前附加段起始地址<br>SS（stack segment）堆栈段寄存器-指明当前堆栈段起始地址    </p>
+<hr>
+<p>物理地址：1MB储存区域的某一单元的实际地址<br>逻辑地址：由段基地址和偏移地址组成<br>段基地址：逻辑段在主存储器中的起始地址<br>偏移地址：某段内指定存储单元到段基地址的距离<br>物理地址PA=段基地址*16+偏移地址</p>
 
       
     </div>
@@ -510,7 +512,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.5k</span>
+    <span title="Site words total count">1.6k</span>
   
 </div>
 <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
